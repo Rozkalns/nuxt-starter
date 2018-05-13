@@ -1,0 +1,89 @@
+{
+  "private": true,
+  "name": "nuxt-starter",
+  "version": "1.0.0",
+  "description": "nuxt starter",
+  "contributors": [
+    "PatrickJS <patrick@tipe.io>",
+    "Scott Moss <scott@tipe.io>",
+    "Mike Moss <mike@tipe.io>"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest --config test/unit/jest.conf.js --coverage",
+    "lint":
+      "eslint --ext .js,.vue .storybook stories apollo components layouts middleware pages plugins store utils nuxt.config.js",
+    "lint-autofix": "yarn lint --fix",
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "precommit": "lint-staged && yarn test"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,vue,graphql}": ["eslint --fix", "git add"]
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^3.0.6",
+    "@nuxtjs/bulma": "^1.1.0",
+    "@nuxtjs/font-awesome": "^1.0.3",
+    "apollo-cache-inmemory": "^1.2.1",
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "marked": "^0.3.19",
+    "node-fetch": "^2.1.2",
+    "nuxt": "^1.0.0",
+    "xstate": "^3.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.4",
+    "@storybook/addon-centered": "^3.4.4",
+    "@storybook/addon-knobs": "^3.4.4",
+    "@storybook/addon-links": "^3.4.4",
+    "@storybook/addon-notes": "^3.4.4",
+    "@storybook/addon-storyshots": "^3.4.4",
+    "@storybook/addon-viewport": "^3.4.4",
+    "@storybook/addons": "^3.4.4",
+    "@storybook/vue": "^3.4.4",
+    "@vue/eslint-config-standard": "^3.0.0-beta.10",
+    "@vue/test-utils": "^1.0.0-beta.16",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jest-css-modules": "^1.1.0",
+    "jest-serializer-vue": "^1.0.0",
+    "jest-vue-preprocessor": "^1.4.0",
+    "lint-staged": "^7.1.0",
+    "node-sass": "^4.8.3",
+    "prettier": "^1.12.1",
+    "react-test-renderer": "^16.3.2",
+    "sass-loader": "^7.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "stylus-supremacy": "^2.11.0",
+    "vue-jest": "^2.5.0",
+    "vue-server-renderer": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
