@@ -4,8 +4,8 @@ node_js:
   - 9
 # services:
 #   - mongodb
-before_install:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+# before_install:
+#   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 # before_script:
 #     - |
 #       echo "Testing MongoDB connection...";tries=4;
